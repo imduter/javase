@@ -1,0 +1,7 @@
+public void someMethod() throws SomeException//声明该方法可能抛出的异常
+{
+	if(someCondition())
+	{
+		throw new SomeException();//构造并抛出异常对象
+	}
+}

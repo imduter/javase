@@ -1,0 +1,5 @@
+强引用：StrongReference:应用指向对象，gc运行时回收（如：字符串常量池）
+软引用：SoftReference,gc运行时可能回收（JVM内存不够）---可以做常用数据的缓存
+弱引用：WeakReference,gc运行时立即回收
+虚引用：PhantomReference,类似无引用，主要跟踪对象被回收的状态，不能单独使用
+必须与引用队列（ReferenceQueue）联合使用
