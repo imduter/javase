@@ -24,7 +24,7 @@ public class LoadDriver
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 
 		    conn =
-		    		DriverManager.getConnection("jdbc:mysql://localhost/mydata?user=root&password=5632111ljt");
+		    		DriverManager.getConnection("jdbc:mysql://localhost/mydata?user=root&password=root");
 		    stmt = conn.createStatement();
 		    rs = stmt.executeQuery("select * from dept");
 		    while(rs.next())
