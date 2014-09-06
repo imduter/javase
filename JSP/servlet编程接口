@@ -1,0 +1,13 @@
+GenericServlet是所有servlet的鼻祖
+用于Http的servlet编程都通过继承
+javax.servlet.http.HttpServlet实现
+请求处理方法：
+1.doGet-------响应get请求，常用
+2.doPost------响应post请求，常用
+3.doPut-------用于http1.1协议
+4.doDelete----用于http1.1协议，仅响应Get请求的头部
+5.doHead------用于http1.1协议
+6.doOptions-----用于http1.1协议
+7.doTrace-------用于http1.1协议
+实例个数：
+在非分布的情况下，通常一个servlet在服务器中只有一个实例

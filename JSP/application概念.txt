@@ -1,0 +1,4 @@
+用于保存整个web-app的生命周期内都可以访问的数据
+在API中表现为ServletContext
+通过HttpServlet的getServletContext()方法得到
+通过ServletContext的get/setAttribute方法取得或设置属性

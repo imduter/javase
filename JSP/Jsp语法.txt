@@ -1,0 +1,33 @@
+-------===1===-----------
+<%! %>
+说明：声明变量，方法都会被保留成唯一的一份，直到Jsp程序停止执行
+用例：
+<%!
+int i;
+public void method(){}<%/*相当于该servlet的方法声明*/%>
+%>
+-------===2===--------
+<%
+int i; <%//局部变量%>
+%>
+---===3===--------------
+<%= i++ %> <%--原封不动的显示--%>
+---===4.Directive(编译指令)=====------
+格式：<%@Directive属性="属性值"%>
+常见Directive:
+1.page(指明与jsp container的沟通方式)
+例：
+<%@page import="com.dreamteam.*,java.Util.*"
+	| errorPage="errorPageUrl" | isErrorPage="true|false"
+	| contentType="contentTypeInfo"
+%>
+2.include(指定jsp程序或html文件包含进来)
+格式：<%@include file="fileURL"%>
+JSP Engine会在JSP程序转化期间先把个文件load进来
+不能向fileURL中传递参数
+===========5.Action(动作指令)===========
+常见：jsp:useBean
+	jsp:include------用于动态包含JSP程序或Html
+	jsp:forward------将一个jsp的内容传送到page所指定的jsp程序中处理
+用例：
+<jsp:forward page="url" flush="true">rojcproj

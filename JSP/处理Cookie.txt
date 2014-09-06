@@ -1,0 +1,23 @@
+Http协议的无连接性要求出现一种保存C/S状态的机制
+Cookie:保存到客户端的一个文本文件，与特定客户相关
+Cookie以"名-值"对的形式保存数据
+创建Cookie：new Cookie(name, value)
+可以使用Cookie的setXX方法来设定一些相对应的值
+setName(String name)/getName()
+setVaule(String value)/getVaule()
+setMaxAge(int ae)/getMaxAge()
+利用HttpServletResponse的addCookie(Cookie)方法将它设置到客户端
+利用HttpServletRequest的getCookie()方法获取客户端的所有Cookie
+--===设置Cookie===--
+SetCookies.java
+--===读取Cookie===--
+ShowCookies.java
+
+------==原则==------
+1.服务器只能向客户端写入文本文档
+2.客户端可以拒绝写入
+3.只能拿自己web-app写入的文档
+4.每个浏览都有一个自己的独一无二编号
+5.Cookie分两种：
+	属于窗口/子窗口
+6.一个servlet/jsp设置的cookies能够被同一个路径下面或则子路径下面的servlet/jsp读到（路径指url）

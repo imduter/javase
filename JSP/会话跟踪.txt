@@ -1,0 +1,25 @@
+#####会话跟踪#####
+1.在某段时间一连串客户端与服务器的交易
+2.在jsp/servlet中，如浏览器不支持Cookie，可以通过URL重写
+来实现，就是将一些额外的数据追加到表示会话的每个URL末尾，
+服务器在该标示符与其存储的有关的该会话的数据间建立关联。
+如：hello.jap?jsessionid=1234
+3.可以通过程序来终止一个会话。如客户端在一定时间内没有操作
+服务器会自动终止会话
+4.通过HttpSession来读写Session
+
+----===Session两种实现方法====---
+1.通过cookie（零时的内存空间）：把session的id放入此
+2.通过url重写
+---===原则===--
+1.若浏览器支持Cookie,创建Session,会将SessionId保存到Cookie里面
+2.若浏览器不支持Cookie,必须自己编程使用Url重写方式实现
+使用函数：response.encodeUrl();
+函数作用：将url中的中文转码，然后在url后加入sessionId.
+3.同一个application下的servlet/jsp可以共享一个session,前提是同一个客户端窗口
+--===Session的过期===---
+由服务器隔段时间清楚所占内存
+通过
+<session-config>
+	<session-timeout>3</session-timeout>
+</session-config>
